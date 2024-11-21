@@ -88,4 +88,9 @@ This project is a video-based parking space analyzer that detects whether a park
 
 ## CORS Configuration
 
-To avoid issues with cross-
+To avoid issues with cross-origin requests, CORS (Cross-Origin Resource Sharing) is enabled in the Flask backend. If you're facing CORS issues, ensure the following is included in the Flask app:
+
+```python
+from flask_cors import CORS
+app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
